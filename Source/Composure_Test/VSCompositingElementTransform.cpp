@@ -46,7 +46,7 @@ void UComposureKeyColorMaterialTransform::SetKey(FLinearColor Color)
 	}
 	else
 	{
-		KeyColors.Add(FLinearColor(0,255,255));
+		KeyColors.Add(FLinearColor(Color));
 	}
 }
 
