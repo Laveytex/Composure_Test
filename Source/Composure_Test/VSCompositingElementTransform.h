@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CompositingElements/CompositingElementInputs.h"
 #include "CompositingElements/CompositingElementPasses.h"
 #include "CompositingElements/CompositingElementTransforms.h"
 #include "VSCompositingElementTransform.generated.h"
@@ -118,6 +119,7 @@ public:
 	
 };
 
+/*
 UCLASS(BlueprintType, Blueprintable, MinimalAPI)
 class UChromakey3 : public UCompositingElementTransform
 {
@@ -133,3 +135,11 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Compositing Pass")
 	void SetMaterial(UMaterialInterface* MyMaterial);
 };
+
+
+UCLASS(BlueprintType, Blueprintable, MinimalAPI)
+class UCompositingMediaInpuBase : public UMediaTextureCompositingInput
+{
+	GENERATED_BODY()
+};
+*/

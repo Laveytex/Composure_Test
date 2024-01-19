@@ -12,8 +12,8 @@ void UComposureKeyColorMaterialTransform::SetMaterialParams(float ChromaBoundVal
                                    float LumaLogContrastValue, float PreBlurKernalSizeValue, float PreBlurSamplesValue, float DevignetteOuterValue,
                                    float DevignetteInnerValue, float DevignetteAmountValue, float AlphaBiasValue, float BlackClipValue,
                                    float WhiteClipValue)
-{
-#if WITH_EDITORONLY_DATA
+ {
+
 	if (KeyerMaterial.ApplyParamOverrides(PrePassLookupTable))
 	{
 		KeyerMaterial.SetScalarOverride(FName(TEXT("ChromaBound")), ChromaBoundValue);
@@ -35,6 +35,7 @@ void UComposureKeyColorMaterialTransform::SetMaterialParams(float ChromaBoundVal
 
 		KeyerMaterial.ApplyParamOverrides(PrePassLookupTable);
 	}
+#if WITH_EDITORONLY_DATA
 #endif
 }
 
@@ -63,7 +64,7 @@ void UComposureKeyColorMaterialTransform::SetMaterial(UMaterialInterface* MyMate
 void UComposureScalarMaterialTransform::SetMaterialParams(float value)
 {
 	
-#if WITH_EDITORONLY_DATA
+
 	Material.SetScalarOverride(FName(TEXT("ChromaBound")), value);
 	//Material.RequiredMaterialParams
 //	Material.ApplyParamOverrides(PrePassLookupTable);
@@ -73,6 +74,7 @@ void UComposureScalarMaterialTransform::SetMaterialParams(float value)
 		ApplyMaterialParams(Material.GetMID());
 		
 	}
+#if WITH_EDITORONLY_DATA
 #endif
 }
 
@@ -84,8 +86,9 @@ void UComposureScalarMaterialTransform::SetMaterialColorParams(FLinearColor valu
 void UComposureScalarMaterialTransform::SetMaterial(UMaterialInterface* MyMaterial)
 {
 	//static ConstructorHelpers::FObjectFinder<UMaterialInterface> GKeyerMaterial(TEXT("/Composure/Materials/ChromaKeying/M_SinglePassChromaKeyer"));
-	#if WITH_EDITORONLY_DATA
+
 	Material.Material = MyMaterial;
+	#if WITH_EDITORONLY_DATA
 	//Material.RequiredMaterialParams
 	#endif
 }
@@ -125,6 +128,7 @@ void UComposureScalarMaterialTransform::TestFoo()
 }
 
 
+/*
 //////////////////////////////////////////////////////////////////////////////////////
 
 void UChromakey3::SetKey(FLinearColor Color)
@@ -136,10 +140,11 @@ void UChromakey3::SetKey(FLinearColor Color)
 	else
 	{
 		KeyColors.Add(FLinearColor(0,255,255));
-	}*/
+	}#1#
 }
 
 void UChromakey3::SetMaterial(UMaterialInterface* MyMaterial)
 {
 	
 }
+*/
