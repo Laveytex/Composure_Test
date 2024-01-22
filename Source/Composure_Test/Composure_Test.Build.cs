@@ -10,7 +10,7 @@ public class Composure_Test : ModuleRules
 	
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
-		PrivateDependencyModuleNames.AddRange(new string[] { "Composure" });
+		PrivateDependencyModuleNames.AddRange(new string[] { "Composure", "ActorLayerUtilities"});
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });

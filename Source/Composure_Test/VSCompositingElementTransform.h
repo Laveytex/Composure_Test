@@ -115,7 +115,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Compositing Pass")
 	void TestFoo();
-
 	
 };
 

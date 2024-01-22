@@ -28,6 +28,18 @@
 		{
 			"Name": "MediaFrameworkUtilities",
 			"Enabled": true
+		},
+		{
+			"Name": "NDIIOPlugin",
+			"Enabled": false
+		},
+		{
+			"Name": "CameraCalibration",
+			"Enabled": true
+		},
+		{
+			"Name": "LiveLinkLens",
+			"Enabled": true
 		}
 	]
 }
