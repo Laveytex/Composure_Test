@@ -31,7 +31,7 @@
 		},
 		{
 			"Name": "NDIIOPlugin",
-			"Enabled": false
+			"Enabled": true
 		},
 		{
 			"Name": "CameraCalibration",
